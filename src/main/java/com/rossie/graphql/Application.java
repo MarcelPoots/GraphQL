@@ -17,13 +17,10 @@ public class Application {
 
     @Bean
     ApplicationRunner applicationRunner(BookRepository bookRepository) {
-        return args -> {
-
-            bookRepository.saveAll(List.of(
-                    new Book("LOTR", "Tolkien"),
-                    new Book("The Blood prince", "JK Rowlins"),
-                    new Book("The Old man and the sea", "Hemingway")
-            ));
-        };
+        return args -> bookRepository.saveAll(List.of(
+                new Book("LOTR", "Tolkien"),
+                new Book("The Blood prince", "JK Rowlins"),
+                new Book("The Old man and the sea", "Hemingway")
+        ));
     }
 }

@@ -1,3 +1,14 @@
 see:
 
-http://localhost:8081/graphiql?path=/graphql
+http://localhost:8082/graphiql?path=/graphql
+
+and run following query:
+
+
+query{
+    books {
+        id
+        title
+        author
+    }
+}
